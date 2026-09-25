@@ -3,7 +3,7 @@ theme: default
 title: Learning About AI
 titleTemplate: '%s — Learning About AI'
 info: |
-  A practical introduction to artificial intelligence.
+  A deta introduction to artificial intelligence.
 class: text-center
 drawings:
   persist: false
@@ -13,7 +13,7 @@ mdc: true
 
 # Learning About AI
 
-## A practical introduction to what artificial intelligence is—and what it is not.
+## A detailed introduction to what artificial intelligence is—and what happens behind the screens.
 
 <div class="pt-12 text-sm opacity-70">Richard Horne</div>
 
@@ -29,6 +29,16 @@ Build a clear, practical foundation for understanding AI:
 2. How does AI work?
 3. What does AI *not* do?
 
+<!--
+Whats our goal. 
+
+1.  Discuss
+2. Overview of how AI REALLY works. 
+3. How AI does what it does.
+
+My personal goal is that each of you can walk away well informed and be empowered to navigate what you run into out in the wild world.  If you don't retain everything we talk about here today, I hope that you will at least remember our journey and the destination.
+-->
+
 ---
 layout: center
 ---
@@ -43,6 +53,18 @@ layout: center
 
 - At their core, AI systems use mathematical models, data, and computer programs. They are powerful tools, but they are not magic. The underlying calculations are repeatable, but the quality of an AI response still depends on the model, its training, the context, and the prompt.
 
+<!--
+What we are NOT going to cover. 
+1. We will not be going over all parts of AI.  There is still lots more a person can learn. 
+2. We will not try to resolve broad debates about AI safety, misuse, or whether AI could harm humanity. Those are important topics, but they are outside today’s introduction.
+
+3. INSTEAD 
+
+a. we will focus on How AI is built -  "the science behind it." 
+
+b. We will explain that AI uses repeatable mathematical calculations. Its responses are based on learned patterns and can vary depending on the model, settings, context, and inputs. AI can respond differently when the context changes, but it does not normally change its underlying training during a conversation.
+-->
+
 ---
 layout: center
 ---
@@ -54,6 +76,14 @@ layout: center
 3. The personal implications of AI and how it might affect you
 4. A full discussion of AI accuracy and its use by organizations, governments, and businesses
 
+<!--
+Things / Topics I would love to talk about another time, but we just wont have time to dive into today.
+
+* You each should have a vocab sheet.  There is a lot of vocabulary that I will use that we simply do not have time to go over today.  I have tried to assist you in giving you key terms and their definitions  in relation to AI and how I will be using them today. 
+
+* I am going to try my best to talk about things simply and provide examples that will connect the ideas to everyday understanding.
+-->
+
 ---
 layout: center
 ---
@@ -62,10 +92,10 @@ layout: center
 
 ## Richard Horne
 
-- Information Security Engineer and Architect
-- Master's degree, plus 15+ professional certifications in advanced computing and AI subjects
-- Builder of AI systems and advanced enterprise security systems
-- Creator of AI tools for language translation, financial analysis, and enterprise network and physical security
+- Computer Security Engineer and Architect
+- Master's degree in Information Protection, plus 15+ professional certifications in advanced computing, information protection, coding, databases and AI
+- Builder of AI systems and advanced enterprise security systems big and small
+- Creator of AI tools for language translation, financial analysis, enterprise networks + interconnectivity security
 
 
 <div class="pt-6 text-sm opacity-70">My perspective comes from both professional security work and hands-on AI system development.</div>
@@ -81,16 +111,34 @@ Let's begin with what you already know and have experienced.
 1. What facts do you know about AI?
 2. How do you think it works?
 3. What have you seen it do that impressed you?
-4. What questions do you have about how AI functions and responds so quickly?
+4. What questions do you have about how AI functions?
 5. What concerns or fears do you have about AI?
+
+<!--
+This area is really important to discuss before we get into the nuts and bolts of todays discussion. 
+
+1. I want to gather feed back about what you think AI is.
+-->
 
 ---
 layout: center
 ---
 
-# Common AI models and systems
+# Alright - lets begin
 
-## An introduction to how AI systems are put together
+<!--
+1. There are a couple foundational building blocks that we need to go over.   These will each build on each other and be iterative in our process to learning.  
+
+2. For each building block feel free to scribble notes, raise your hand and ask lots of questions.  I will do my best to answer them.
+-->
+
+---
+layout: center
+---
+
+# AI Models
+
+## Different models are used for different tasks. 
 
 <div class="grid grid-cols-2 gap-4 pt-8 text-left">
   <div class="rounded-lg bg-blue-50 p-4 text-slate-900">
@@ -110,6 +158,18 @@ layout: center
     <p class="mt-2 text-sm">Systems that help a model work toward a goal by planning steps, keeping track of context, and using tools such as files or software.</p>
   </div>
 </div>
+
+<!--
+1.  AI model types strongly influence the extent of the what is going to be accomplished. 
+
+2.  Choosing a model is critical and is done as a part of the initial architecture requirements when building anything. 
+
+3. Training and building models is time intensive and very expensive.  Many groups will leverage models that they did not build themselves, but were provided by those who could. 
+
+4. Models must be trained and created.  Imagine a model as being a large snapshot in time of many different parameters.  These parameters include relationships between words, references to data, formulas, rules etc.
+
+5. Garbage in, Garbage out.  If the training on your model is muddled with useless data, then you have all of that you will have to hold and manage.  This is why it a models build process is so important.  It's what you make of it that determines what you are able to work with later.
+-->
 
 ---
 layout: center
@@ -136,6 +196,18 @@ Large language models (LLMs) are among today’s most widely used AI systems. Th
 
 <div class="pt-6 text-sm opacity-70">Training is intentional work: it takes substantial computing power, time, expertise, and care. The data and decisions made during training shape a model’s strengths and limitations.</div>
 
+<!--
+* Large Language Models are the models that have become the defacto. 
+
+* LLMs can range from 3.5 billion parameters to some that far exceed 100s of billions of parameters. 
+
+Facts about LLMs:
+1. They do not store a bunch of answers. 
+2. LLMs are huge maps of relationships and meaning. 
+* Think of the biggest spider web you can imagine.  Each intersection of that spider web has meaning. As one crawls through or makes use of the web different, intersections and points can be leveraged for decision making. 
+3. Building any model is a methodical process.
+-->
+
 ---
 layout: center
 ---
@@ -145,18 +217,26 @@ layout: center
 This simple question will follow us throughout the presentation. It gives us a firm foundation for exploring how AI understands requests, produces answers, and where its limits are.
 
 ## “How to change a light bulb?”
-
-#### Follow-up question: “What is a light bulb?”
+>##### Follow-up question: “What is a light bulb?”
 
 <div class="pt-8 text-sm opacity-70">We will return to this question as we learn more about AI systems.</div>
 
+<!--
+Our model acts as the receptacle inside of which we are able to store relationships - but none of us can interact with billions of parameters on our own.  
+
+So when we ask questions it must be broken down,  broken into a parts that the Model can understand and contextually react to. 
+
+To do this lets use a seed question.
+-->
+
 ---
-layout: two-cols-header
+layout: default
 ---
 
-# Tokens
+# Step One - Tokens
 
-::left::
+<div class="mt-5 grid grid-cols-2 items-start gap-14 text-left">
+<div class="min-w-0 border-r-2 border-slate-300 pr-9">
 
 ## Text into pieces a model can process
 
@@ -164,17 +244,29 @@ Before a language model can work with text, it divides that text into units call
 
 Think of a tokenizer as a lookup system: it assigns each token a numeric ID. The ID is only a label; it does not contain the token’s meaning. A model learns useful relationships through the numbers and patterns it processes after tokenization.
 
-::right::
+</div>
+
+<div class="min-w-0 pl-2">
 
 <TokensDemo />
+</div>
+</div>
+
+<!--
+1. We need a way for spoken language to have meaning to a computer.   Tokens are chucks of information that when processed create contextual understanding for the model. 
+2.  There are different ways to create tokens. Regardless of how a token is created the meaning or definition is what is required for all of this to work.  Our Model needs to interpret and receive the tokens the same way everytime.  
+3. A great example of this is the old library system of indexing which books and their physical location inside of a library.  "Dewy Decimal System."  Each word of our prompt or question - or "tokens" needs to be cataloged for reference by the model. 
+4. The word or token itself does not have meaning.  The computer does not care that the word "Book" is associated to its respective token ID, nor vise versa.  The computer does not care, what that word is, it only cares about the relationship between the values of the tokens and their relationships to one another.
+-->
 
 ---
-layout: two-cols-header
+layout: default
 ---
 
 # Vectors
 
-::left::
+<div class="mt-5 grid grid-cols-2 items-start gap-14 text-left">
+<div class="min-w-0 border-r-2 border-slate-300 pr-9">
 
 <h2>An ordered container for numeric information</h2>
 
@@ -182,27 +274,50 @@ layout: two-cols-header
 
 <p>A vector can describe almost anything measurable—such as a location, a pixel’s color, or simple features of a sentence. In a language model, tokens begin as learned vectors and are repeatedly transformed using the words around them.</p>
 
-<div class="mt-4 rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm text-slate-900"><strong>Key distinction:</strong> A vector is the general number-list format. An embedding is a particular learned vector designed to capture meaning and relationships.</div>
+<div class="mt-4 rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm text-slate-900"><strong>Key distinction:</strong> A vector is the general number-list format. An embedding as we will learn about next is a particular learned vector designed to capture meaning and relationships.</div>
 
-::right::
+</div>
+
+<div class="min-w-0 pl-2">
 
 <VectorsDemo />
+</div>
+</div>
+
+<!--
+1. Who remembers vectors from Algebra in math.  What meaning does a value pair give to a data point or a variable? 
+
+2. Vectors with AI are similar but are modified by their surrounding partners. 
+
+3. We are not creating data points on a a graph per-say, but we are mapping areas that are relevant to what is contextually happening.  Tokens are chained together and their vectoring impacts the outcome of the models understanding. 
+
+4. What would happen if I took a steal ball and placed it near magnets?  It would be affected by those magnets and depending on the size and shape of the magnets, our steal ball could be impacted a lot or a little.  Thus the context of vectors could be considered a lot like the magnets having an effect on a steal object.  a vector of multiple tokens can be influenced by what came before or after them just like a magnet has an effect on steal that is not physically seen.  Our point here is that context is able to impact the vectoring process as tokens are mapped and applied inside of models.
+-->
 
 ---
-layout: two-cols-header
+layout: default
 ---
 
 # Embeddings: a map of relationships
 
-::left::
+<div class="mt-5 grid grid-cols-2 items-start gap-14 text-left">
+<div class="min-w-0 border-r-2 border-slate-300 pr-9">
 
 ## How AI links related ideas
 
 An embedding is a **special kind of learned vector** that helps an AI organize meaning. Imagine placing ideas on a map: questions about similar things tend to sit closer together. The underlying numbers make those relationships possible—the key idea is connection.
 
-::right::
+</div>
+
+<div class="min-w-0 pl-2">
 
 <EmbeddingsDemo />
+</div>
+</div>
+
+<!--
+Embeddings help to direct a models decision making and contextual understanding.   Imagine that these are specially learned vectors that aid in placing related ideas closer together.
+-->
 
 ---
 layout: center
@@ -214,6 +329,13 @@ class: text-center
 <img src="/trained-model-relationship-map.png" alt="Conceptual diagram of a trained language model, many learned dimensions, and a visible relationship map of related questions." style="max-height: 390px; width: auto; margin: 0 auto;" />
 
 <div class="pt-2 text-xs opacity-70">Conceptual illustration: a real model uses far more dimensions than can be shown. We project those learned relationships into a simple map so people can see the idea.</div>
+
+---
+layout: center
+---
+
+# Bringing it together with a real-world example
+
 
 ---
 layout: two-cols
@@ -277,12 +399,6 @@ Training adjusts the model’s internal relationships using many examples. Testi
 ---
 layout: center
 class: text-center
----
-
-# Bringing it together with a real-world example
-
----
-layout: center
 ---
 
 # Same question, different models, Same Answer?

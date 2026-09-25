@@ -7,6 +7,7 @@ Use this sheet as a plain-language guide during the presentation.
 | **Agentic framework** | A system that lets an AI model plan steps and use tools, such as searching files or calling software, to work toward a goal. |
 | **Artificial intelligence (AI)** | Technology that performs tasks associated with human intelligence, such as recognizing patterns, making predictions, or generating content. |
 | **Attention** | A method that helps a language model weigh which parts of the current text are most relevant. |
+| **Context** | The information a model is given or can consider while producing a response, such as the conversation so far, instructions, a document, or a question. |
 | **Context window** | The amount of information a model can consider at one time in a conversation or document. |
 | **Dimensions** | The individual positions or features in a vector. Together, many dimensions give an AI system a detailed way to represent information. |
 | **Embedding** | A vector that represents meaning and relationships. Ideas with related meanings are often placed closer together in this kind of representation. |
@@ -16,11 +17,13 @@ Use this sheet as a plain-language guide during the presentation.
 | **Hallucination** | A confident-sounding AI response that is incorrect, unsupported, or invented. |
 | **Human oversight** | A person checking AI output, applying judgment, and remaining accountable for decisions. |
 | **Inference** | Using a trained model to respond to a new prompt. This is what happens when you ask a model a question. |
+| **Inputs** | The information supplied to an AI system for it to process, such as a prompt, uploaded document, image, audio recording, or data from a tool. |
 | **Language model** | An AI system trained on examples of language to predict likely next pieces of text. |
 | **Large language model (LLM)** | A language model with a very large number of adjustable internal values, often able to work with broad and complex language tasks. |
+| **Model** | A trained mathematical system that uses learned parameters to process inputs and produce an output, such as a prediction, classification, or response. |
 | **Multimodal AI** | AI that can work with more than one type of information, such as text, images, audio, or video. |
 | **Neural network** | A layered mathematical system that learns patterns by adjusting many internal values during training. |
-| **Parameter** | One of the internal adjustable values a model changes during training. Modern models can have billions of parameters. |
+| **Parameters** | The internal adjustable values a model changes during training. Modern models can have billions of parameters. |
 | **Prompt** | The instructions, question, or information a person gives an AI system. |
 | **Relationships** | The meaningful connections between ideas, words, or pieces of information. AI uses these connections to identify content that is similar or relevant. |
 | **Retrieval-augmented generation (RAG)** | A system that finds relevant information from a separate source and gives it to a language model to help answer a question. |
@@ -31,3 +34,4 @@ Use this sheet as a plain-language guide during the presentation.
 | **Training** | The time-intensive process of adjusting a model using many examples so it becomes better at a task, such as predicting text. |
 | **Training data** | The selected and prepared information used to help a model learn patterns. |
 | **Vector** | A list of numbers a computer uses to represent information so it can compare and work with it mathematically. |
+| **Weighting** | The way an AI system gives some signals, relationships, or examples more influence than others when calculating an output. During training, models adjust internal weights to improve their predictions. |
