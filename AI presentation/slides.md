@@ -30,7 +30,7 @@ Build a clear, practical foundation for understanding AI:
 3. What does AI *not* do?
 
 <!--
-Whats our goal. 
+What's our goal?
 
 1.  Discuss
 2. Overview of how AI REALLY works. 
@@ -77,9 +77,9 @@ layout: center
 4. A full discussion of AI accuracy and its use by organizations, governments, and businesses
 
 <!--
-Things / Topics I would love to talk about another time, but we just wont have time to dive into today.
+Things/topics I would love to talk about another time, but we just won't have time to dive into today.
 
-* You each should have a vocab sheet.  There is a lot of vocabulary that I will use that we simply do not have time to go over today.  I have tried to assist you in giving you key terms and their definitions  in relation to AI and how I will be using them today. 
+* You should each have a vocabulary sheet. There is a lot of vocabulary that I will use that we simply do not have time to cover today. I have provided key terms and their definitions in relation to AI and how I will use them today.
 
 * I am going to try my best to talk about things simply and provide examples that will connect the ideas to everyday understanding.
 -->
@@ -115,19 +115,19 @@ Let's begin with what you already know and have experienced.
 5. What concerns or fears do you have about AI?
 
 <!--
-This area is really important to discuss before we get into the nuts and bolts of todays discussion. 
+This area is really important to discuss before we get into the nuts and bolts of today's discussion.
 
-1. I want to gather feed back about what you think AI is.
+1. I want to gather feedback about what you think AI is.
 -->
 
 ---
 layout: center
 ---
 
-# Alright - lets begin
+# Alright — let's begin
 
 <!--
-1. There are a couple foundational building blocks that we need to go over.   These will each build on each other and be iterative in our process to learning.  
+1. There are a couple of foundational building blocks that we need to cover. Each one builds on the previous one as we learn.
 
 2. For each building block feel free to scribble notes, raise your hand and ask lots of questions.  I will do my best to answer them.
 -->
@@ -160,15 +160,15 @@ layout: center
 </div>
 
 <!--
-1.  AI model types strongly influence the extent of the what is going to be accomplished. 
+1. AI model types strongly influence what can be accomplished.
 
-2.  Choosing a model is critical and is done as a part of the initial architecture requirements when building anything. 
+2. Choosing a model is critical and is part of the initial architecture requirements when building anything.
 
-3. Training and building models is time intensive and very expensive.  Many groups will leverage models that they did not build themselves, but were provided by those who could. 
+3. Training and building models are time-intensive and very expensive. Many groups leverage models that they did not build themselves, but that were provided by those who could.
 
 4. Models must be trained and created.  Imagine a model as being a large snapshot in time of many different parameters.  These parameters include relationships between words, references to data, formulas, rules etc.
 
-5. Garbage in, Garbage out.  If the training on your model is muddled with useless data, then you have all of that you will have to hold and manage.  This is why it a models build process is so important.  It's what you make of it that determines what you are able to work with later.
+5. Garbage in, garbage out. If the training on your model is muddled with useless data, then you have all of that to hold and manage. This is why a model's build process is so important. It's what you make of it that determines what you are able to work with later.
 -->
 
 ---
@@ -197,14 +197,14 @@ Large language models (LLMs) are among today’s most widely used AI systems. Th
 <div class="pt-6 text-sm opacity-70">Training is intentional work: it takes substantial computing power, time, expertise, and care. The data and decisions made during training shape a model’s strengths and limitations.</div>
 
 <!--
-* Large Language Models are the models that have become the defacto. 
+* Large language models are the models that have become the de facto standard.
 
-* LLMs can range from 3.5 billion parameters to some that far exceed 100s of billions of parameters. 
+* LLMs can range from 3.5 billion parameters to some that far exceed hundreds of billions of parameters.
 
 Facts about LLMs:
 1. They do not store a bunch of answers. 
 2. LLMs are huge maps of relationships and meaning. 
-* Think of the biggest spider web you can imagine.  Each intersection of that spider web has meaning. As one crawls through or makes use of the web different, intersections and points can be leveraged for decision making. 
+* Think of the biggest spider web you can imagine. Each intersection of that spider web has meaning. As one crawls through or makes use of the web, different intersections and points can be leveraged for decision-making.
 3. Building any model is a methodical process.
 -->
 
@@ -222,11 +222,11 @@ This simple question will follow us throughout the presentation. It gives us a f
 <div class="pt-8 text-sm opacity-70">We will return to this question as we learn more about AI systems.</div>
 
 <!--
-Our model acts as the receptacle inside of which we are able to store relationships - but none of us can interact with billions of parameters on our own.  
+Our model acts as the receptacle inside of which we are able to store relationships, but none of us can interact with billions of parameters on our own.
 
-So when we ask questions it must be broken down,  broken into a parts that the Model can understand and contextually react to. 
+So, when we ask questions, they must be broken down into parts that the model can understand and contextually react to.
 
-To do this lets use a seed question.
+To do this, let's use a seed question.
 -->
 
 ---
@@ -253,10 +253,10 @@ Think of a tokenizer as a lookup system: it assigns each token a numeric ID. The
 </div>
 
 <!--
-1. We need a way for spoken language to have meaning to a computer.   Tokens are chucks of information that when processed create contextual understanding for the model. 
-2.  There are different ways to create tokens. Regardless of how a token is created the meaning or definition is what is required for all of this to work.  Our Model needs to interpret and receive the tokens the same way everytime.  
-3. A great example of this is the old library system of indexing which books and their physical location inside of a library.  "Dewy Decimal System."  Each word of our prompt or question - or "tokens" needs to be cataloged for reference by the model. 
-4. The word or token itself does not have meaning.  The computer does not care that the word "Book" is associated to its respective token ID, nor vise versa.  The computer does not care, what that word is, it only cares about the relationship between the values of the tokens and their relationships to one another.
+1. We need a way for spoken language to have meaning to a computer. Tokens are chunks of information that, when processed, create contextual understanding for the model.
+2. There are different ways to create tokens. Regardless of how a token is created, the meaning or definition is what is required for all of this to work. Our model needs to interpret and receive the tokens the same way every time.
+3. A great example of this is the old library system of indexing books and their physical locations inside a library: the "Dewey Decimal System." Each word of our prompt or question—or "token"—needs to be cataloged for reference by the model.
+4. The word or token itself does not have meaning. The computer does not care that the word "Book" is associated with its respective token ID, nor vice versa. The computer does not care what that word is; it only cares about the relationship between the values of the tokens and their relationships to one another.
 -->
 
 ---
@@ -285,13 +285,13 @@ layout: default
 </div>
 
 <!--
-1. Who remembers vectors from Algebra in math.  What meaning does a value pair give to a data point or a variable? 
+1. Who remembers vectors from algebra in math? What meaning does a pair of values give to a data point or a variable?
 
 2. Vectors with AI are similar but are modified by their surrounding partners. 
 
-3. We are not creating data points on a a graph per-say, but we are mapping areas that are relevant to what is contextually happening.  Tokens are chained together and their vectoring impacts the outcome of the models understanding. 
+3. We are not creating data points on a graph, per se, but we are mapping areas that are relevant to what is contextually happening. Tokens are chained together, and their vectoring impacts the outcome of the model's understanding.
 
-4. What would happen if I took a steal ball and placed it near magnets?  It would be affected by those magnets and depending on the size and shape of the magnets, our steal ball could be impacted a lot or a little.  Thus the context of vectors could be considered a lot like the magnets having an effect on a steal object.  a vector of multiple tokens can be influenced by what came before or after them just like a magnet has an effect on steal that is not physically seen.  Our point here is that context is able to impact the vectoring process as tokens are mapped and applied inside of models.
+4. What would happen if I took a steel ball and placed it near magnets? It would be affected by those magnets, and depending on the size and shape of the magnets, our steel ball could be impacted a lot or a little. Thus, the context of vectors could be considered a lot like magnets having an effect on a steel object. A vector of multiple tokens can be influenced by what came before or after them, just like a magnet has an effect on steel that is not physically seen. Our point here is that context can impact the vectoring process as tokens are mapped and applied inside models.
 -->
 
 ---
@@ -316,7 +316,7 @@ An embedding is a **special kind of learned vector** that helps an AI organize m
 </div>
 
 <!--
-Embeddings help to direct a models decision making and contextual understanding.   Imagine that these are specially learned vectors that aid in placing related ideas closer together.
+Embeddings help to direct a model's decision-making and contextual understanding. Imagine that these are specially learned vectors that aid in placing related ideas closer together.
 -->
 
 ---
@@ -336,12 +336,35 @@ layout: center
 
 # Bringing it together with a real-world example
 
+---
+layout: center
+class: text-center
+---
+
+# How can AI answer detailed questions?
+
+## A relatable story
+
+Imagine asking how to replace a part in a 50-year-old radio. An AI tool may offer useful guidance because it has learned patterns from information such as manuals, articles, and discussions. It does not understand the radio as a technician does, and its answer can still be incomplete or wrong. But its contextual and model training help to guide its responses.
+
+# Why is every response not a jumbled mess then?
+
+Training is the answer.  Training adjusts the model’s internal relationships using many examples. Testing and human feedback help teams find weaknesses and improve models and versions. Today’s models reflect years of careful development, evaluation, and refinement—but important answers still need checking.
+
+<!--
+Context is powerful and answers can be found through hard work and training. 
+
+It's taken a lot of painstaking effort to get to where we are today with AI. It will continue to take more effort to grow into the future.
+-->
 
 ---
-layout: two-cols
+layout: default
 ---
 
 # Hallucinations
+
+<div class="mt-5 grid grid-cols-2 items-start gap-14 text-left">
+<div class="min-w-0 border-r-2 border-slate-300 pr-9">
 
 ## What does that mean when it comes to AI tools?
 
@@ -351,7 +374,9 @@ A hallucination is an AI response that sounds believable but is incorrect, unsup
 
 <div class="mt-2 text-center text-xs opacity-60">Image: Carrie Wexford, generated with Bing Image Creator; <a href="https://medium.com/stories-by-carrie-wexford/why-do-ai-people-have-extra-fingers-b50b1e0dcfcf" target="_blank" rel="noreferrer">“Why Do AI People Have Extra Fingers?”</a></div>
 
-::right::
+</div>
+
+<div class="min-w-0 pl-2">
 
 ## Why can it happen?
 
@@ -359,9 +384,16 @@ A hallucination is an AI response that sounds believable but is incorrect, unsup
 - The question may be ambiguous or lack enough context.
 - The model can produce plausible wording even when it does not have enough reliable information.
 - Some questions do not have one clear, factual answer.
- 
+</div>
+</div>
 
-<div class="mt-5 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-slate-900"><strong>Remember:</strong> Verify important claims, ask for sources, and use human judgment—especially for health, legal, financial, security, or other high-stakes decisions. A language model is designed to generate a response, even when a question is unclear or lacks enough information.</div>
+<!--
+It's important to remember that an AI model's job is to provide an answer, so when prompted, it will provide the best answer it can every time. In the case of text, responses can be incorrect or go on for much longer than needed.
+
+In the case of images, this can take the form of many deviations from what the normal eye would view as correct.
+
+Hallucinations are difficult to catch when we assume that AI is perfect and do not review the content ourselves fully.
+-->
 
 ---
 layout: center
@@ -386,21 +418,6 @@ layout: center
 class: text-center
 ---
 
-# If AI is math, how can it answer detailed questions?
-
-## A relatable story
-
-Imagine asking how to replace a part in a 50-year-old radio. An AI tool may offer useful guidance because it has learned patterns from information such as manuals, articles, and discussions. It does not understand the radio as a technician does, and its answer can still be incomplete or wrong.
-
-# Why is every response not a hallucination?
-
-Training adjusts the model’s internal relationships using many examples. Testing and human feedback help teams find weaknesses and improve later versions. Today’s models reflect years of careful development, evaluation, and refinement—but important answers still need checking.
-
----
-layout: center
-class: text-center
----
-
 # Same question, different models, Same Answer?
 
 <ModelComparisonDemo />
@@ -408,8 +425,11 @@ class: text-center
 <div class="pt-5 text-center text-xs opacity-60">Here we use the same seed questions and demonstrate how the same question can produce results that are vastly different.</div>
 
 ---
-layout: two-cols
+layout: default
 ---
+
+<div class="mt-5 grid grid-cols-2 items-start gap-14 text-left">
+<div class="min-w-0 border-r-2 border-slate-300 pr-9">
 
 # Where AI can help
 
@@ -419,8 +439,9 @@ layout: two-cols
 - Translate, caption, and improve accessibility
 - Help explore complex problems when it is given relevant context—then check the result
 
+</div>
 
-::right::
+<div class="min-w-0 pl-2">
 
 # Where care is essential
 
@@ -428,6 +449,8 @@ layout: two-cols
 - Outputs can reflect biased, incomplete, or promotional source material
 - Private or sensitive information can be exposed if it is entered into an unsecured AI tool
 - People remain accountable for important decisions
+</div>
+</div>
 
 ---
 layout: center

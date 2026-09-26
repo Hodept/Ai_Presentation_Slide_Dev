@@ -2,9 +2,6 @@ import {
   AlignmentType,
   BorderStyle,
   Document,
-  Footer,
-  Header,
-  PageNumber,
   Packer,
   Paragraph,
   ShadingType,
@@ -51,42 +48,54 @@ const terms = [
   ['Weighting', 'The way an AI system gives some signals, relationships, or examples more influence than others when calculating an output. During training, models adjust internal weights to improve their predictions.'],
 ]
 
-const tableWidth = 9360
-const termWidth = 2520
-const definitionWidth = tableWidth - termWidth
-const lightBlue = 'E8EEF5'
-const mutedBlue = '1F4D78'
+const tableWidth = 14560
+const termWidth = 2380
+const definitionWidth = 4900
+const lightGray = 'E7E7E7'
 const borders = {
-  top: { style: BorderStyle.SINGLE, size: 4, color: 'B8C7D9' },
-  bottom: { style: BorderStyle.SINGLE, size: 4, color: 'B8C7D9' },
-  left: { style: BorderStyle.SINGLE, size: 4, color: 'B8C7D9' },
-  right: { style: BorderStyle.SINGLE, size: 4, color: 'B8C7D9' },
-  insideHorizontal: { style: BorderStyle.SINGLE, size: 2, color: 'D9E2EC' },
-  insideVertical: { style: BorderStyle.SINGLE, size: 2, color: 'D9E2EC' },
+  top: { style: BorderStyle.SINGLE, size: 4, color: 'D9D9D9' },
+  bottom: { style: BorderStyle.SINGLE, size: 4, color: 'D9D9D9' },
+  left: { style: BorderStyle.SINGLE, size: 4, color: 'D9D9D9' },
+  right: { style: BorderStyle.SINGLE, size: 4, color: 'D9D9D9' },
+  insideHorizontal: { style: BorderStyle.SINGLE, size: 2, color: 'D9D9D9' },
+  insideVertical: { style: BorderStyle.SINGLE, size: 2, color: 'D9D9D9' },
 }
 
 const cell = (text, width, { bold = false, fill } = {}) => new TableCell({
   width: { size: width, type: WidthType.DXA },
   verticalAlign: VerticalAlign.CENTER,
   shading: fill ? { type: ShadingType.CLEAR, fill } : undefined,
-  margins: { top: 80, bottom: 80, start: 120, end: 120 },
+  margins: { top: 52, bottom: 52, start: 70, end: 70 },
   children: [new Paragraph({
-    spacing: { before: 0, after: 0, line: 275 },
-    children: [new TextRun({ text, bold, font: 'Calibri', size: 20, color: '111827' })],
+    spacing: { before: 0, after: 0, line: 215 },
+    children: [new TextRun({ text, bold, font: 'Calibri', size: 18, color: '000000' })],
   })],
 })
 
 const headerRow = new TableRow({
   tableHeader: true,
   children: [
-    cell('TERM', termWidth, { bold: true, fill: lightBlue }),
-    cell('PLAIN-LANGUAGE DEFINITION', definitionWidth, { bold: true, fill: lightBlue }),
+    cell('TERM', termWidth, { bold: true, fill: lightGray }),
+    cell('PLAIN-LANGUAGE DEFINITION', definitionWidth, { bold: true, fill: lightGray }),
+    cell('TERM', termWidth, { bold: true, fill: lightGray }),
+    cell('PLAIN-LANGUAGE DEFINITION', definitionWidth, { bold: true, fill: lightGray }),
   ],
 })
 
-const rows = terms.map(([term, definition]) => new TableRow({
-  children: [cell(term, termWidth, { bold: true }), cell(definition, definitionWidth)],
-}))
+const midpoint = Math.ceil(terms.length / 2)
+const leftTerms = terms.slice(0, midpoint)
+const rightTerms = terms.slice(midpoint)
+const rows = leftTerms.map(([leftTerm, leftDefinition], index) => {
+  const [rightTerm = '', rightDefinition = ''] = rightTerms[index] ?? []
+  return new TableRow({
+    children: [
+      cell(leftTerm, termWidth, { bold: true }),
+      cell(leftDefinition, definitionWidth),
+      cell(rightTerm, termWidth, { bold: true }),
+      cell(rightDefinition, definitionWidth),
+    ],
+  })
+})
 
 const document = new Document({
   creator: 'Richard Horne',
@@ -102,43 +111,29 @@ const document = new Document({
   sections: [{
     properties: {
       page: {
-        size: { width: 12240, height: 15840 },
-        margin: { top: 1440, right: 1440, bottom: 1440, left: 1440, header: 709, footer: 709 },
+        size: { width: 15840, height: 12240 },
+        margin: { top: 540, right: 540, bottom: 540, left: 540, header: 0, footer: 0 },
       },
-    },
-    headers: {
-      default: new Header({ children: [new Paragraph({
-        alignment: AlignmentType.RIGHT,
-        spacing: { after: 0 },
-        children: [new TextRun({ text: 'LEARNING ABOUT AI  |  KEY VOCABULARY', font: 'Calibri', size: 16, color: mutedBlue, bold: true })],
-      })] }),
-    },
-    footers: {
-      default: new Footer({ children: [new Paragraph({
-        alignment: AlignmentType.CENTER,
-        spacing: { before: 0, after: 0 },
-        children: [
-          new TextRun({ text: 'Vocabulary handout  •  Page ', font: 'Calibri', size: 16, color: '5B6472' }),
-          new TextRun({ children: [PageNumber.CURRENT], font: 'Calibri', size: 16, color: '5B6472' }),
-        ],
-      })] }),
     },
     children: [
       new Paragraph({
-        spacing: { before: 0, after: 60 },
-        children: [new TextRun({ text: 'Learning About AI', font: 'Calibri', size: 34, bold: true, color: mutedBlue })],
+        alignment: AlignmentType.CENTER,
+        spacing: { before: 0, after: 30 },
+        children: [new TextRun({ text: 'Learning About AI', font: 'Calibri', size: 26, bold: true, color: '000000' })],
       }),
       new Paragraph({
-        spacing: { before: 0, after: 200 },
-        children: [new TextRun({ text: 'Key Vocabulary', font: 'Calibri', size: 24, color: '3D4A5C' })],
+        alignment: AlignmentType.CENTER,
+        spacing: { before: 0, after: 90 },
+        children: [new TextRun({ text: 'Key Vocabulary', font: 'Calibri', size: 18, color: '000000' })],
       }),
       new Paragraph({
-        spacing: { before: 0, after: 180 },
-        children: [new TextRun({ text: 'Plain-language definitions used in this presentation. Keep this handout nearby as you explore the examples and discussion questions.', font: 'Calibri', size: 20, color: '374151' })],
+        alignment: AlignmentType.CENTER,
+        spacing: { before: 0, after: 90 },
+        children: [new TextRun({ text: 'Plain-language definitions used in this presentation.', font: 'Calibri', size: 16, color: '000000' })],
       }),
       new Table({
         width: { size: tableWidth, type: WidthType.DXA },
-        columnWidths: [termWidth, definitionWidth],
+        columnWidths: [termWidth, definitionWidth, termWidth, definitionWidth],
         borders,
         rows: [headerRow, ...rows],
       }),
